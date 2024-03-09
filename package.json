@@ -18,24 +18,24 @@
   "author": "Yamill Vallecillo <yamill@gmail.com> (github.com/yamill)",
   "contributors": [
     {
-      "name" : "André Neves",
-      "email" : "@andrerfneves",
-      "url" : "https://andrenev.es"
+      "name": "André Neves",
+      "email": "@andrerfneves",
+      "url": "https://andrenev.es"
     },
     {
-      "name" : "Aleksi Pousar",
-      "email" : "aleksi1578@msn.com"
+      "name": "Aleksi Pousar",
+      "email": "aleksi1578@msn.com"
     }
   ],
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Spicy-Sparks/react-native-orientation.git"
+    "url": "git+https://github.com/theoneit/react-native-orientation.git"
   },
   "bugs": {
-    "url": "https://github.com/Spicy-Sparks/react-native-orientation/issues"
+    "url": "https://github.com/theoneit/react-native-orientation/issues"
   },
-  "homepage": "https://github.com/Spicy-Sparks/react-native-orientation#readme",
+  "homepage": "https://github.com/theoneit/react-native-orientation#readme",
   "rnpm": {
     "android": {
       "packageInstance": "new OrientationPackage()"
