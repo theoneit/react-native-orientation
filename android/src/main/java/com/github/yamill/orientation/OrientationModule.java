@@ -8,6 +8,7 @@ import android.content.IntentFilter;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.util.Log;
+import android.os.Build;
 
 import com.facebook.common.logging.FLog;
 import com.facebook.react.bridge.Arguments;
@@ -150,7 +151,12 @@ public class OrientationModule extends ReactContextBaseJavaModule implements Lif
             FLog.e(ReactConstants.TAG, "no activity to register receiver");
             return;
         }
-        activity.registerReceiver(receiver, new IntentFilter("onConfigurationChanged"));
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            activity.registerReceiver(receiver, new IntentFilter("onConfigurationChanged"), Context.RECEIVER_EXPORTED);
+        } else {
+            activity.registerReceiver(receiver, new IntentFilter("onConfigurationChanged"));
+        }
     }
     @Override
     public void onHostPause() {
